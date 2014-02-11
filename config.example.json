@@ -1,0 +1,17 @@
+// remove comments for valid json
+
+{
+	"logging" : {
+		"accessLog" : "accesslog.log" // somehow this doesn't seem to work?
+	},
+	"ports" : {
+		"8989" : { // the port the server is listening on (you probably want port 80, standard web port)
+			"proxy" : {
+				"*/pathfinder/*" : "localhost:1337/[2]" , // a node app, listening at port 1337. anything to http://host/pathfinder will go here 
+															// actually, it'll probably match http://host/someotherapp/pathfinder too, need to fix?
+				"*" : "8080"							 // everything else goes to 8080, where apache (for example) could be listening. 
+			}
+
+		}
+	}
+}
