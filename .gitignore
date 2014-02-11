@@ -4,3 +4,4 @@ out.txt
 accesslog.log
 
 server.node copy.js
+config.json
