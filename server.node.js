@@ -6,7 +6,10 @@ var config = require("./config.json");
 httpMaster.init(config,
  function(err){
 	// listening
-	console.log(err);
+	console.log("proxy running");
+	if(err){
+		console.log(err);
+	}
 });
 
 httpMaster.logNotice(function(msg){
@@ -14,7 +17,6 @@ httpMaster.logNotice(function(msg){
 });
 
 httpMaster.logError(function(msg){
-	console.log("proxy running");
 	if(msg){
 		console.log(msg);
 	}
