@@ -13,9 +13,10 @@ httpMaster.logNotice(function(msg){
 	console.log(msg);
 });
 
-
-
 httpMaster.logError(function(msg){
-	console.log(msg);
+	console.log("proxy running");
+	if(msg){
+		console.log(msg);
+	}
 });
 
