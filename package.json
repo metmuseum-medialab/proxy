@@ -1,0 +1,25 @@
+{
+  "name": "metmuseum-medialab",
+  "homepage": "http://lab.scrapi.org",
+  "bugs": "http://github.com/metmuseum-medialab/proxy/issues",
+  "contributors": [
+    "Don Undeen",
+    "Jonathan Dahan"
+  ],
+  "licenses": [
+    "ISC"
+  ],
+  "version": "0.0.1",
+  "description": "medialab website",
+  "author": "Don Undeen <don.undeen@metmuseum.org>",
+  "keywords": [
+    "museum"
+  ],
+  "dependencies": {
+    "http-master": "^0.7.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/metmuseum-medialab/proxy.git"
+  }
+}
