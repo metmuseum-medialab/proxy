@@ -10,6 +10,16 @@ httpMaster.init(config,
 	if(err){
 		console.log(err);
 	}
+     try {
+	 console.log('Old User ID: ' + process.getuid() + ', Old Group ID: ' + process.getgid());
+	 process.setgid('metmuseum');
+	 process.setuid('metmuseum');
+	 console.log('New User ID: ' + process.getuid() + ', New Group ID: ' + process.getgid());
+     } catch (err) {
+	 console.log('Cowardly refusing to keep the process alive as root.');
+	 process.exit(1);
+     }
+
 });
 
 httpMaster.logNotice(function(msg){
