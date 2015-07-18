@@ -5,6 +5,8 @@ var config = require("./config.ec2.json");
 
 var env = "ec2";
 
+console.log("loading it up !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+
 httpMaster.init(config,
  function(err){
 	// listening
