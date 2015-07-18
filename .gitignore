@@ -1,7 +1,7 @@
 node_modules/*
 out.txt
-
 accesslog.log
+<<<<<<< HEAD
 
 server.node copy.js
 config.json
@@ -9,3 +9,8 @@ config.json
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+=======
+config.json
+*~
+*bak
+>>>>>>> f9c976b1dc8303154ddb24a530a1b27ba0963155

@@ -3,6 +3,8 @@ var httpMaster = new HttpMaster();
 
 var config = require("./config.ec2.json");
 
+var env = "ec2";
+
 httpMaster.init(config,
  function(err){
 	// listening
@@ -10,17 +12,30 @@ httpMaster.init(config,
 	if(err){
 		console.log(err);
 	}
-    try {
-        console.log('Old User ID: ' + process.getuid() + ', Old Group ID: ' + process.getgid());
-        process.setgid('staff');
-        process.setuid('donundeen');
-        console.log('New User ID: ' + process.getuid() + ', New Group ID: ' + process.getgid());
-    } catch (err) {
-        console.log('Cowardly refusing to keep the process alive as root.');
-        console.log(err);
-        process.exit(1);
-    }
+    if(env == "local"){
+        try {
+            console.log('Old User ID: ' + process.getuid() + ', Old Group ID: ' + process.getgid());
+            process.setgid('staff');
+            process.setuid('donundeen');
+            console.log('New User ID: ' + process.getuid() + ', New Group ID: ' + process.getgid());
+        } catch (err) {
+            console.log('Cowardly refusing to keep the process alive as root.');
+            console.log(err);
+            process.exit(1);
+        }
+    }else if (env=="metmuseum")
+         try {
+        	 console.log('Old User ID: ' + process.getuid() + ', Old Group ID: ' + process.getgid());
+        	 process.setgid('metmuseum');
+        	 process.setuid('metmuseum');
+        	 console.log('New User ID: ' + process.getuid() + ', New Group ID: ' + process.getgid());
+         } catch (err) {
+        	 console.log('Cowardly refusing to keep the process alive as root.');
+        	 process.exit(1);
+         }
+     }else {
 
+     }
 });
 
 httpMaster.logNotice(function(msg){
@@ -29,7 +44,6 @@ httpMaster.logNotice(function(msg){
 });
 
 httpMaster.logError(function(msg){
-    console.log("logging error");
 	if(msg){
 		console.log(msg);
 	}
