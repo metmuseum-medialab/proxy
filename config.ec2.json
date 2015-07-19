@@ -3,7 +3,7 @@
     "8081": {
       "router": {
         "*/image_proxy/*": ["addHeader -> host=fast-mesa-5492.herokuapp.com", "addHeader -> port=80","http://fast-mesa-5492.herokuapp.com/?action=imgproxy&imgname=[2]"],
-        "*/meteor/*": ["addHeader -> host=boomhifive.metero.com", "addHeader -> port=80","http://boomhifive.meteor.com/[2]"],
+        "*/meteor/*": ["addHeader -> host=boomhifive.metero.com", "addHeader -> port=80","redirect -> http://boomhifive.meteor.com/[2]"],
         "*" : "redirect -> http://google.com"
       }
     }
