@@ -8,12 +8,14 @@ var config = require("./config.ec2.json");
 var env = "ec2";
 
 
+// testing url: http://boomhifive-proxy.elasticbeanstalk.com/image_proxy/?action=imgproxy&imgname=http://hyperallergic.com/wp-content/uploads/2015/07/jesusmarymet02.jpg&width=200
+
 httpMaster.init(config,
  function(err){
 	// listening
 	console.log("proxy running");
 	if(err){
-        console.log("some sort of proxy error..........................")
+        console.log("some sort of proxy error......!! !!....................");
 		console.log(err);
 	}
     if(env == "local"){
