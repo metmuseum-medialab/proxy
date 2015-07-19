@@ -1,6 +1,6 @@
 {
   "name": "metmuseum-medialab",
-  "homepage": "http://lab.scrapi.org",
+  "homepage": "http://www.metmuseum.org",
   "bugs": "http://github.com/metmuseum-medialab/proxy/issues",
   "contributors": [
     "Don Undeen",
@@ -9,8 +9,11 @@
   "licenses": [
     "ISC"
   ],
+  "scripts": {
+    "start": "node app"
+  },
   "version": "0.0.1",
-  "description": "medialab website",
+  "description": "medialab proxy server",
   "author": "Don Undeen <don.undeen@metmuseum.org>",
   "keywords": [
     "museum"
