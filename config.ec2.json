@@ -2,7 +2,8 @@
   "ports": {
     "8081": {
       "router": {
-        "*/image_proxy/*": "https://fast-mesa-5492.herokuapp.com/[2]"
+        "*/image_proxy/*": "fast-mesa-5492.herokuapp.com/[2]",
+        "*" : "http://google.com/webhp?q=[1]"
       }
     }
   }
