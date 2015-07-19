@@ -2,7 +2,7 @@
   "ports": {
     "8081": {
       "router": {
-        "*" : ["addHeader -> host=boomhifive.meteor.com", "addHeader -> port=80", "boomhifive.meteor.com/[path]"]
+        "*" : ["addHeader -> host=boomhifive.meteor.com", "addHeader -> port=80", "redirect -> boomhifive.meteor.com/[path]"]
       }
     }
   }
