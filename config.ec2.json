@@ -2,7 +2,7 @@
   "ports": {
     "8081": {
       "router": {
-        "*/image_proxy/*": "fast-mesa-5492.herokuapp.com/[2]",
+        "*/image_proxy/*": "http://fast-mesa-5492.herokuapp.com/?action=imgproxy&imgname=http://hyperallergic.com/wp-content/uploads/2015/07/jesusmarymet02.jpg&width=200",
         "*" : "google.com/webhp?q=[1]"
       }
     }
