@@ -2,7 +2,7 @@
   "ports": {
     "8081": {
       "router": {
-        "*/image_proxy/*": "redirect -> http://fast-mesa-5492.herokuapp.com/[2]",
+        "*/image_proxy/?action=imgproxy*": "redirect -> http://fast-mesa-5492.herokuapp.com/?action=imgproxy[2]&foo=bar",
         "*" : "redirect -> http://google.com"
       }
     }
