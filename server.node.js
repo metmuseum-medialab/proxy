@@ -13,6 +13,7 @@ httpMaster.init(config,
 	// listening
 	console.log("proxy running");
 	if(err){
+        console.log("some sort of proxy error..........................")
 		console.log(err);
 	}
     if(env == "local"){
@@ -42,12 +43,13 @@ httpMaster.init(config,
 });
 
 httpMaster.logNotice(function(msg){
-    console.log("logging notice");
+    console.log("logging notice nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn");
 	console.log(msg);
 });
 
 httpMaster.logError(function(msg){
 	if(msg){
+        console.log("logging error @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 		console.log(msg);
 	}
 });
