@@ -10,7 +10,10 @@ var env = "ec2";
 
 // testing url: http://boomhifive-proxy.elasticbeanstalk.com/image_proxy/?action=imgproxy&imgname=http://hyperallergic.com/wp-content/uploads/2015/07/jesusmarymet02.jpg&width=200
 // http://boomhifive-proxy.elasticbeanstalk.com/http://hyperallergic.com/wp-content/uploads/2015/07/jesusmarymet02.jpg&width=200
+//        "*/image_proxy/*" : ["addHeader -> host=fast-mesa-5492.herokuapp.com", "addHeader -> port=80","http://fast-mesa-5492.herokuapp.com/?action=imgproxy&imgname=[2]"],
+
 httpMaster.init(config,
+
  function(err){
 	// listening
 	console.log("proxy running");
