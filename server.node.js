@@ -26,7 +26,7 @@ httpMaster.init(config,
             console.log(err);
             process.exit(1);
         }
-    }else if (env=="metmuseum")
+    }else if (env=="metmuseum"){
          try {
         	 console.log('Old User ID: ' + process.getuid() + ', Old Group ID: ' + process.getgid());
         	 process.setgid('metmuseum');
