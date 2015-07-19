@@ -1,6 +1,6 @@
 {
   "ports": {
-    "80": {
+    "8081": {
       "router": {
         "*/image_proxy/*": "https://fast-mesa-5492.herokuapp.com/[2]"
       }
