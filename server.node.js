@@ -3,13 +3,17 @@ console.log("loading it up !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 var HttpMaster = require("http-master");
 var httpMaster = new HttpMaster();
 
-var config = require("./config.ec2.json");
-
 var env = "ec2";
+
+
+var config = require("./config.ec2.json");
+//var config = require("./config.json");
+
 
 
 // testing url: http://boomhifive-proxy.elasticbeanstalk.com/image_proxy/?action=imgproxy&imgname=http://hyperallergic.com/wp-content/uploads/2015/07/jesusmarymet02.jpg&width=200
 // http://boomhifive-proxy.elasticbeanstalk.com/http://hyperallergic.com/wp-content/uploads/2015/07/jesusmarymet02.jpg&width=200
+//        "*/image_proxy/*" : ["addHeader -> host=fast-mesa-5492.herokuapp.com", "addHeader -> port=80","http://fast-mesa-5492.herokuapp.com/?action=imgproxy&imgname=[2]"],
 //        "*/image_proxy/*" : ["addHeader -> host=fast-mesa-5492.herokuapp.com", "addHeader -> port=80","http://fast-mesa-5492.herokuapp.com/?action=imgproxy&imgname=[2]"],
 
 httpMaster.init(config,
